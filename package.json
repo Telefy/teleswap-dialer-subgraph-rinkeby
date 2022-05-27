@@ -1,0 +1,14 @@
+{
+    "name": "DialerContract",
+    "private": true,
+    "license": "MIT",
+    "version": "1.0.0",
+    "author": "TeleSwap",
+    "scripts": {
+        "codegen": "graph codegen subgraph.yaml",
+        "build": "graph build subgraph.yaml"
+    },
+    "dependencies": {
+        "@graphprotocol/graph-ts": "^0.26.0"
+    }
+}
