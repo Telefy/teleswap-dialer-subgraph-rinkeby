@@ -5,7 +5,8 @@ import {
   Harvest,
   LogPoolAddition,
   LogSetPool,
-  LogUpdatePool
+  LogUpdatePool,
+  
 } from '../../generated/DialerContract/DialerContract'
 
 import { Address, BigDecimal, BigInt, dataSource, ethereum, log } from '@graphprotocol/graph-ts'
@@ -95,6 +96,7 @@ export function logUpdatePool(event: LogUpdatePool): void {
 
   
 }
+
 
 export function deposit(event: Deposit): void {
   log.info('[DialerContract] Log Deposit {} {} {} {}', [

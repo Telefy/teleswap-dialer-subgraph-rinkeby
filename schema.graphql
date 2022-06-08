@@ -5,11 +5,13 @@ type DialerContract @entity {
   #owner: Bytes!
   #migrator: Bytes!
 
-  #telePerBlock: BgInt! not needed till fully migrated over
+  telePerBlock: BigInt!
   totalAllocPoint: BigInt!
 
   pools: [Pool!] @derivedFrom(field: "dialerContract")
   poolCount: BigInt!
+  bonusMultiplier: Int!
+  bonusEndBlock: BigInt!
 
   #history: [History!]! @derivedFrom(field: "dialerContract")
 
