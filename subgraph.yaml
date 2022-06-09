@@ -10,7 +10,7 @@ dataSources:
     source:
       address: "0xD847ce6e90Cb1AdD5b7EB8BA7E50Ae7b66DdB148"
       abi: DialerContract
-      startBlock: 10727200
+      startBlock: 10810001
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.5
@@ -53,6 +53,8 @@ dataSources:
           handler: logSetPool
         - event: LogUpdatePool(indexed uint256,uint64,uint256,uint256)
           handler: logUpdatePool
+        - event: AddMultiplier(uint16,uint64)
+          handler: addMultiplier
 templates:
   - kind: ethereum/contract
     name: CloneRewarderTime
