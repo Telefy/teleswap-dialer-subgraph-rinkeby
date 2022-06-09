@@ -6,7 +6,7 @@ import {
   LogPoolAddition,
   LogSetPool,
   LogUpdatePool,
-  
+
 } from '../../generated/DialerContract/DialerContract'
 
 import { Address, BigDecimal, BigInt, dataSource, ethereum, log } from '@graphprotocol/graph-ts'
@@ -65,8 +65,8 @@ export function logSetPool(event: LogSetPool): void {
   const pool = getPool(event.params.pid, event.block)
 
   if (event.params.overwrite == true) {
-     const rewarder = getRewarder(event.params.rewarder, event.block)
-     pool.rewarder = rewarder.id
+    const rewarder = getRewarder(event.params.rewarder, event.block)
+    pool.rewarder = rewarder.id
   }
 
   dialercontract.totalAllocPoint = dialercontract.totalAllocPoint.plus(event.params.allocPoint.minus(pool.allocPoint))
@@ -85,16 +85,14 @@ export function logUpdatePool(event: LogUpdatePool): void {
   ])
 
   const dialercontract = getDialerContract(event.block)
-  const pool = getPool(event.params.pid, event.block)  
+  const pool = getPool(event.params.pid, event.block)
   const poolRewarderString = pool.rewarder
-    if(poolRewarderString) {
-      updateRewarder(Address.fromString(poolRewarderString))
-      pool.accTelePerShare = event.params.accTelePerShare
-      pool.lastRewardBlock = event.params.lastRewardBlock
-      pool.save()
-    }
-
-  
+  if (poolRewarderString) {
+    updateRewarder(Address.fromString(poolRewarderString))
+    pool.accTelePerShare = event.params.accTelePerShare
+    pool.lastRewardBlock = event.params.lastRewardBlock
+    pool.save()
+  }
 }
 
 

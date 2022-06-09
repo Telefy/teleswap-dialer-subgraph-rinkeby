@@ -7,7 +7,7 @@
   "scripts": {
     "codegen": "graph codegen",
     "build": "graph build",
-    "deploy": "graph deploy --node https://api.thegraph.com/deploy/ lokisanhitleson/teleswapdialersubgraphrinkebyv1"
+    "deploy": "graph deploy --product hosted-service lokisanhitleson/teleswapdialersubgraphrinkebyv1"
   },
   "dependencies": {
     "@graphprotocol/graph-ts": "^0.26.0"
