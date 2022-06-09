@@ -100,8 +100,6 @@ export function addMultiplier(event: AddMultiplier): void {
     event.params.multiplier.toString(),
     event.params.endBlock.toString(),
   ])
-  log.debug('NewMultiplier-----', [])
-
   const dialercontract = getDialerContract(event.block)
   dialercontract.bonusMultiplier = event.params.multiplier
   dialercontract.bonusEndBlock = event.params.endBlock
