@@ -1,14 +1,15 @@
 {
-    "name": "DialerContract",
-    "private": true,
-    "license": "MIT",
-    "version": "1.0.0",
-    "author": "TeleSwap",
-    "scripts": {
-        "codegen": "graph codegen subgraph.yaml",
-        "build": "graph build subgraph.yaml"
-    },
-    "dependencies": {
-        "@graphprotocol/graph-ts": "^0.26.0"
-    }
+  "name": "DialerContract",
+  "private": true,
+  "license": "MIT",
+  "version": "1.0.0",
+  "author": "Mazelon",
+  "scripts": {
+    "codegen": "graph codegen",
+    "build": "graph build",
+    "deploy": "graph deploy --node https://api.thegraph.com/deploy/ lokisanhitleson/teleswapdialersubgraphrinkebyv1"
+  },
+  "dependencies": {
+    "@graphprotocol/graph-ts": "^0.26.0"
+  }
 }
