@@ -6,7 +6,7 @@ import {
   LogPoolAddition,
   LogSetPool,
   LogUpdatePool,
-  
+  AddMultiplier
 } from '../../generated/DialerContract/DialerContract'
 
 import { Address, BigDecimal, BigInt, dataSource, ethereum, log } from '@graphprotocol/graph-ts'
@@ -97,6 +97,18 @@ export function logUpdatePool(event: LogUpdatePool): void {
   
 }
 
+export function addMultiplier(event: AddMultiplier): void {
+  log.info('[DialerContract] Log new AddMultiplier {} {}', [
+    event.params.multiplier.toString(),
+    event.params.endBlock.toString(),
+  ])
+  log.debug('NewMultiplier-----', [])
+
+  const dialercontract = getDialerContract(event.block)
+  dialercontract.bonusMultiplier = event.params.multiplier
+  dialercontract.bonusEndBlock = event.params.endBlock
+  dialercontract.save()
+}
 
 export function deposit(event: Deposit): void {
   log.info('[DialerContract] Log Deposit {} {} {} {}', [
