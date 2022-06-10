@@ -2,12 +2,12 @@
   "name": "DialerContract",
   "private": true,
   "license": "MIT",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Mazelon",
   "scripts": {
     "codegen": "graph codegen",
     "build": "graph build",
-    "deploy": "graph deploy --product hosted-service lokisanhitleson/Teleswapdialersubgraphrinkebyv2"
+    "deploy": "graph deploy --product hosted-service lokisanhitleson/Teleswapdialersubgraphrinkebyv1"
   },
   "dependencies": {
     "@graphprotocol/graph-ts": "^0.26.0"
