@@ -8,9 +8,9 @@ dataSources:
     name: DialerContract
     network: rinkeby
     source:
-      address: "0xD847ce6e90Cb1AdD5b7EB8BA7E50Ae7b66DdB148"
+      address: "0x93Aec21BF1506B8a6091b5b6178aDf08E60eFeb3"
       abi: DialerContract
-      startBlock: 10810001
+      startBlock: 10826496
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.5
