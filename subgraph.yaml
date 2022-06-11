@@ -10,7 +10,7 @@ dataSources:
     source:
       address: "0x49a8b51BE385f3F82C57b9a018e093b7e7807b75"
       abi: DialerContract
-      startBlock: 10827412
+      startBlock: 10828569
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.5
