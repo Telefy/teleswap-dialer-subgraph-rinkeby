@@ -8,7 +8,7 @@ dataSources:
     name: DialerContract
     network: rinkeby
     source:
-      address: "0xe9Cee26e8c165B34Aa4C8841aF354caCc98D72F5"
+      address: "0x49a8b51BE385f3F82C57b9a018e093b7e7807b75"
       abi: DialerContract
       startBlock: 10827412
     mapping:
